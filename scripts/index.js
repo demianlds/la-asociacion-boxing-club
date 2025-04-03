@@ -119,3 +119,34 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = "auto"; // Restaura el scroll cuando se cierra
     });
 });
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita la recarga de la página
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const successMessage = document.getElementById("successMessage");
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            successMessage.style.display = "block"; // Muestra el mensaje de éxito
+            form.reset(); // Limpia los campos del formulario
+        } else {
+            throw new Error("Error al enviar el formulario");
+        }
+    })
+    .catch(error => {
+        console.error("Error al enviar el formulario:", error);
+        alert("Hubo un error al enviar el formulario.");
+    });
+});
+
+document.getElementById('hamburger').addEventListener('click', function() {
+    const navbar = document.getElementById('navbarNav');
+    navbar.classList.toggle('active');
+});
