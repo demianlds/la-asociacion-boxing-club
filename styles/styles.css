@@ -383,10 +383,13 @@ font-size: 20px;
 
  .contact-section {
     background-color: #121212;
-    padding: 50px 0;
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 30px;
 }
 
 .container {
@@ -394,11 +397,20 @@ font-size: 20px;
     width: 90%;
     background: #1e1e1e;
     padding: 30px;
+    /* padding-left: 20px;
+    padding-right: 43px;
+    padding-bottom: 20px; */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
 
 /* Estilos para los inputs */
+
+#contactForm {
+    margin-right: 15px;
+}
+
 .input-group {
     position: relative;
     margin-bottom: 20px;
@@ -571,6 +583,28 @@ font-size: 20px;
 .home-content .btn {
     font-size: 0.9rem;
     padding: 8px 16px;
+}
+
+.us-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.us-text, .us-image {
+    width: 100%;
+    text-align: center;
+}
+
+.us-text.visible {
+    padding-right: 0; /* Elimina el padding derecho en móvil */
+}
+
+.paragraph {
+    text-align: center; /* Centra específicamente los párrafos */
+}
+
+.container {
+    width: auto;
 }
 
 }
