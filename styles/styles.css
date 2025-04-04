@@ -28,6 +28,7 @@ html, body {
 }
 
 /* Navbar */
+
 .shield {
     width: 80px;
     height: auto;
@@ -48,7 +49,6 @@ html, body {
 font-size: 20px;
 }
 
-/* Estilo del navbar */
 .navbar {
     padding: .5rem 1rem;
     background-color: #0101f5;
@@ -74,7 +74,7 @@ font-size: 20px;
 }
 .joines {
     display: inline-block;
-    background-color: black; /* Fondo negro */
+    background-color: black;
     color: white;
     padding: 0px 10px;
     border-radius: 40px;
@@ -84,7 +84,7 @@ font-size: 20px;
 
 .joines:hover {
     transform: scale(1.1);
-    background-color: #222; /* Cambia a un negro más claro al pasar el mouse */
+    background-color: #222;
 }
 
 .navbar-nav .nav-link:hover {
@@ -201,15 +201,16 @@ font-size: 20px;
 .us-text {
     width: 50%;
     color: white;
-    opacity: 0; /* Para animación */
+    opacity: 0;
     transform: translateX(-50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    justify-content: flex-start; /* Asegura que el contenido se mantenga arriba */
+    justify-content: flex-start;
 }
 
 .us-text.visible {
     opacity: 1;
     transform: translateX(0);
+    padding-right: 30px;
 }
 
 .title {
@@ -264,8 +265,12 @@ font-size: 20px;
     justify-content: center;
 }
 
+.swiper-wrapper {
+    align-items: center;
+}
+
 .swiper-slide img {
-    width: 80%; /* Ajusta el tamaño de las imágenes */
+    width: 80%;
     height: auto;
     max-height: 300px;
     object-fit: cover;
@@ -308,7 +313,7 @@ font-size: 20px;
 }
 
 #imageModal {
-    display: none; /* Ocultar el modal al inicio */
+    display: none;
 }
 
 #imageModal .modal-content {
@@ -341,7 +346,6 @@ font-size: 20px;
     cursor: pointer;
 }
 
-/* Estilos para Prev y Next */
 .btn-nav {
     position: absolute;
     top: 50%;
@@ -361,7 +365,6 @@ font-size: 20px;
     justify-content: center;
 }
 
-/* Hover y efecto */
 .btn-nav:hover {
     background: rgba(255, 255, 255, 0.5);
     transform: translateY(-50%) scale(1.1);
@@ -423,7 +426,6 @@ font-size: 20px;
     transition: 0.3s;
 }
 
-/* Efecto flotante en los inputs */
 .input-group input:focus,
 .input-group textarea:focus {
     border-color: #0101f5;
@@ -465,21 +467,21 @@ font-size: 20px;
 
 /* Sumate */
 #sumate {
-    background-color: black; /* Fondo negro */
-    padding: 50px 0; /* Espaciado superior e inferior */
-    text-align: center; /* Centrar contenido */
+    background-color: black;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .joines-content h1 {
-    color: white; /* Texto en blanco */
+    color: white;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
 #sumate img {
-    width: 100%; /* Imagen ocupa el 100% del ancho */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Elimina espacios extra */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Footer */
@@ -519,11 +521,11 @@ font-size: 20px;
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #25D366; /* Verde de WhatsApp */
+    color: #25D366;
 }
 
 .social-icons a:first-child:hover {
-    color: #E4405F; /* Color de Instagram */
+    color: #E4405F;
 }
 
 
@@ -552,10 +554,13 @@ font-size: 20px;
 
 .navbar-nav {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
 }
 
 .navbar-nav .nav-item {
-    margin-top: 15px; /* Baja los elementos del menú */
+    margin-top: 15px;
 }
 
 .home-content {
