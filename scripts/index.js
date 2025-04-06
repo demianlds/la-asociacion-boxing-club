@@ -150,3 +150,22 @@ document.getElementById('hamburger').addEventListener('click', function() {
     const navbar = document.getElementById('navbarNav');
     navbar.classList.toggle('active');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappButton = document.querySelector(".whatsapp-button");
+    const footer = document.querySelector("#site-footer");
+
+    function checkIntersection() {
+        const buttonRect = whatsappButton.getBoundingClientRect();
+        const footerRect = footer.getBoundingClientRect();
+
+        if (buttonRect.bottom > footerRect.top) {
+            whatsappButton.classList.add("fade-out");
+        } else {
+            whatsappButton.classList.remove("fade-out");
+        }
+    }
+
+    window.addEventListener("scroll", checkIntersection);
+    window.addEventListener("resize", checkIntersection);
+});
